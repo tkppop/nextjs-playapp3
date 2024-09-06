@@ -8,7 +8,7 @@ export default function NavBar() {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
-              <span className="text-2xl font-bold text-primary">Logo</span>
+              <span className="text-2xl font-bold text-purple-600">Pragmatyze</span>
             </Link>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">

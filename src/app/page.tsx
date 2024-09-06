@@ -11,6 +11,9 @@ export default function Home() {
           <p> This is Prasanna's project</p>
           <br />
           <p> someone is playing here</p>
+          <Link href="/about" className="text-blue-500 hover:underline">
+            About Us
+          </Link>
         </div>
       </div>
     </main>
