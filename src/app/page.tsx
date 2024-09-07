@@ -8,6 +8,7 @@ export default function Home() {
         <p> This is a home page</p>
         <p> More content to follow</p>
         <div> 
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <p> This is Prasanna's project</p>
           <br />
           <p> someone is playing here</p>
