@@ -17,6 +17,7 @@ export default async function ServicesPage() {
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
       <div>
         <h1 className="text-2xl font-bold mb-4">Welcome to Our Services</h1>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <p className="mb-4">Hello {firstName}, We're glad to have you here.</p>
         <h1>This is a services page</h1>
         <p>More content to follow</p>
