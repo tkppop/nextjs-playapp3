@@ -1,4 +1,13 @@
+import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
+
 export default function ServicesPage() {
+  const { userId } = auth();
+
+  if (!userId) {
+    redirect("/");
+  }
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
       <div>

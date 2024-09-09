@@ -1,5 +1,12 @@
 import Link from 'next/link'
 import { Button } from "@/components/ui/button"
+import {
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+  SignUpButton
+} from '@clerk/nextjs'
 
 export default function NavBar() {
   return (
@@ -28,8 +35,17 @@ export default function NavBar() {
             </div>
           </div>
           <div className="hidden md:block">
-            <Button variant="outline" className="mr-2">Log in</Button>
-            <Button>Sign up</Button>
+            <SignedOut>
+              <SignInButton mode="modal">
+                <Button variant="outline" className="mr-2">Log in</Button>
+              </SignInButton>
+              <SignUpButton mode="modal">
+                <Button>Sign up</Button>
+              </SignUpButton>
+            </SignedOut>
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
           </div>
           <div className="md:hidden">
             <Button variant="ghost" className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-accent-foreground hover:bg-accent focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
@@ -59,8 +75,17 @@ export default function NavBar() {
         </div>
         <div className="pt-4 pb-3 border-t border-border">
           <div className="px-2 space-y-1">
-            <Button variant="outline" className="w-full mb-2">Log in</Button>
-            {/* <Button className="w-full">Sign up</Button> */}
+            <SignedOut>
+              <SignInButton mode="modal">
+                <Button variant="outline" className="w-full mb-2">Log in</Button>
+              </SignInButton>
+              <SignUpButton mode="modal">
+                <Button className="w-full">Sign up</Button>
+              </SignUpButton>
+            </SignedOut>
+            <SignedIn>
+              <UserButton afterSignOutUrl="/" />
+            </SignedIn>
           </div>
         </div>
       </div>
