@@ -25,9 +25,11 @@ export default function NavBar() {
                 <Link href="/about" className="text-foreground hover:bg-accent hover:text-accent-foreground px-3 py-2 rounded-md text-sm font-medium">
                   About
                 </Link>
-                <Link href="/services" className="text-foreground hover:bg-accent hover:text-accent-foreground px-3 py-2 rounded-md text-sm font-medium">
-                  Services
-                </Link>
+                <SignedIn>
+                  <Link href="/services" className="text-foreground hover:bg-accent hover:text-accent-foreground px-3 py-2 rounded-md text-sm font-medium">
+                    Services
+                  </Link>
+                </SignedIn>
                 <Link href="/contact" className="text-foreground hover:bg-accent hover:text-accent-foreground px-3 py-2 rounded-md text-sm font-medium">
                   Contact
                 </Link>
@@ -66,9 +68,11 @@ export default function NavBar() {
           <Link href="/about" className="text-foreground hover:bg-accent hover:text-accent-foreground block px-3 py-2 rounded-md text-base font-medium">
             About
           </Link>
-          <Link href="/services" className="text-foreground hover:bg-accent hover:text-accent-foreground block px-3 py-2 rounded-md text-base font-medium">
-            Services
-          </Link>
+          <SignedIn>
+            <Link href="/services" className="text-foreground hover:bg-accent hover:text-accent-foreground block px-3 py-2 rounded-md text-base font-medium">
+              Services
+            </Link>
+          </SignedIn>
           <Link href="/contact" className="text-foreground hover:bg-accent hover:text-accent-foreground block px-3 py-2 rounded-md text-base font-medium">
             Contact
           </Link>

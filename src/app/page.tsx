@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { auth } from "@clerk/nextjs/server";
 
 export default async function Home() {
-  const { userId } = await auth();
+  // const { userId } = await auth();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -18,13 +18,11 @@ export default async function Home() {
           <Link href="/about" className="text-blue-500 hover:underline">
             About Us
           </Link>
-          {userId ? (
+          {/* {userId && (
             <Link href="/services" className="text-blue-500 hover:underline ml-4">
               Services
             </Link>
-          ) : (
-            <p className="mt-4">Please sign in to view services</p>
-          )}
+          )} */}
         </div>
       </div>
     </main>
